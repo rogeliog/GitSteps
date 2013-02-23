@@ -28,3 +28,23 @@ Timeline.getMentionsFor = function(tweets){
   return _.object(users_pairs);
 }
 
+Timeline.getDaysFor = function(tweets) {
+  days = makeArrayOf(0, 7);
+
+  _.each(tweets,function(tweet){
+    date = new Date(tweet.created_at);
+    tweetDay = date.getDay();
+    days[tweetDay]++;
+  });
+
+  return days;
+}
+
+makeArrayOf = function(value, length) {
+  var arr = [], i = length;
+  while (i--) {
+    arr[i] = value;
+  }
+  return arr;
+}
+

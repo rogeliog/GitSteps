@@ -3,6 +3,7 @@ var Display = {};
 $(function(){
 
 	Display.raphael_bar = Raphael("bar_graph",460,300);
+	Display.raphael_pie = Raphael("pie_chart",460,300);
 
 	Display.bar_fin = function () {
 		this.flag = Display.raphael_bar.popup(this.bar.x, this.bar.y+40, this.bar.value || "0").insertBefore(this);
@@ -45,4 +46,28 @@ $(function(){
     Display.userBackground = function(user) {
       $('body').css('background', "url(" + user.profile_background_image_url + ")");
     }
+
+    Display.daysOfWeek = function(days) {
+      labels = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      pie = Display.raphael_pie.piechart(250, 150, 100, days, {legend: labels, legendpos: "west"});
+
+      pie.hover(function () {
+        this.sector.stop();
+        this.sector.scale(1.05, 1.05, this.cx, this.cy);
+
+        if (this.label) {
+          this.label[0].stop();
+          this.label[0].attr({ r: 7.5 });
+          this.label[1].attr({ "font-weight": 800 });
+        }
+      }, function () {
+        this.sector.animate({ transform: 's1 1 ' + this.cx + ' ' + this.cy }, 500, "bounce");
+
+        if (this.label) {
+          this.label[0].animate({ r: 5 }, 500, "bounce");
+          this.label[1].attr({ "font-weight": 400 });
+        }
+      });
+}
+
 });

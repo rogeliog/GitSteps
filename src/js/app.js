@@ -3,6 +3,7 @@ $(function(){
   updateData = function(tweets){
       user = Timeline.getUser(tweets);
 	  mentions = Timeline.getMentionsFor(tweets);
+      days = Timeline.getDaysFor(tweets);
       displayData();
   }
 
@@ -11,6 +12,7 @@ $(function(){
     Display.userInfo(user);
     Display.userStats(user);
 	Display.mentions(mentions);
+    Display.daysOfWeek(days);
   }
 
 
