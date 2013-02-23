@@ -1,62 +1,64 @@
 <html>
-  <head>
-    <script src="lib/js/jquery.js"> </script>
-    <script src="lib/js/underscore.js"> </script>
-    <script src="lib/js/raphael.js"> </script>
-    <script src="lib/js/g.raphael.js"> </script>
-    <script src="lib/js/g.bar.js"> </script>
-    <script src="lib/js/g.line.js"> </script>
-    <script src="lib/js/g.pie.js"> </script>
-    <script src="lib/js/g.dot.js"> </script>
-    <script src="lib/js/g.dot.js"> </script>
-    <script src="lib/js/d3.min.js"> </script>
-    <script src="lib/js/d3.layout.cloud.js"> </script>
-    <script src="src/js/helpers.js"> </script>
-    <script src="src/js/displayers.js"> </script>
-    <script src="src/js/app.js"> </script>
-    <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="src/css/app.css">
-  </head>
-  <body>
-    <div class="container">
-      <div id="title" class="span4 center">
-        <h1>Tweetmetrics</h1>
-        <form class="form-search">
-          <div class="input-append">
-            <input id="user_name" type="text" class="input-medium search-query" value="ricardog22">
-            <button id="search" type="submit" class="btn">Search</button>
-          </div>
-        </form>
-      </div>
-      <div id='user_info' class="info_box well span6 center">
-        <div class="row-fluid">
-          <div class="span2">
-            <img id='image' />
-          </div>
-          <div class="span4">
-            <h2 id='name'> </h2>
-            <p id='screen_name'> </p>
-            <p id='bio'> </p>
-          </div>
-        </div>
-      </div>
+	<head>
+		<script src="lib/js/jquery.js"> </script>
+		<script src="lib/js/underscore.js"> </script>
+		<script src="lib/js/raphael.js"> </script>
+		<script src="lib/js/g.raphael.js"> </script>
+		<script src="lib/js/g.bar.js"> </script>
+		<script src="lib/js/g.line.js"> </script>
+		<script src="lib/js/g.pie.js"> </script>
+		<script src="lib/js/g.dot.js"> </script>
+		<script src="lib/js/g.dot.js"> </script>
+		<script src="lib/js/d3.min.js"> </script>
+		<script src="lib/js/d3.layout.cloud.js"> </script>
+		<script src="src/js/helpers.js"> </script>
+		<script src="src/js/displayers.js"> </script>
+		<script src="src/js/app.js"> </script>
+		<link rel="stylesheet" type="text/css" href="lib/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="src/css/app.css">
+	</head>
+	<body>
+		<div class="container">
+			<div id="title" class="span4 center">
+				<h1>Tweetmetrics</h1>
+				<form class="form-search">
+					<div class="input-append">
+						<input id="user_name" type="text" class="input-medium search-query" value="ricardog22">
+						<button id="search" type="submit" class="btn">Search</button>
+					</div>
+				</form>
+			</div>
+			<div id='user_info' class="info_box well span6 center">
+				<div class="row-fluid">
+					<div class="span2">
+						<img id='image' />
+					</div>
+					<div class="span4">
+						<h2 id='name'> </h2>
+						<p id='screen_name'> </p>
+						<p id='bio'> </p>
+					</div>
+				</div>
+			</div>
 
-      <div id='user_stats' class="span6 center">
-        <div class="row-fluid">
-          <div id='following' class='span4 well'> 
-            <p class='content'></p>
-            <h5>Following</h5>
-          </div>
-          <div id='followers' class='span4 well'> 
-            <p class='content'></p>
-            <h5>Followers</h5>
-          </div>
-          <div id='tweets' class='span4 well'> 
-            <p class='content'></p>
-            <h5>Tweets</h5>
-          </div>
-        </div>
-
-    </div>
-  </body>
-</html>
+			<div id='user_stats' class="span6 center">
+				<div class="row-fluid">
+					<div id='following' class='span4 well'> 
+						<p class='content'></p>
+						<h5>Following</h5>
+					</div>
+					<div id='followers' class='span4 well'> 
+						<p class='content'></p>
+						<h5>Followers</h5>
+					</div>
+					<div id='tweets' class='span4 well'> 
+						<p class='content'></p>
+						<h5>Tweets</h5>
+					</div>
+				</div>
+			</div>
+			<div id="bar_graph" class="info_box well span6 center">
+				<center style="color:#a1a1a1">Who do you most mention?</center>
+			</div>
+		</body>
+	</html>
