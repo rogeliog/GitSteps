@@ -1,7 +1,8 @@
 $(function(){
 
   updateData = function(data){
-	  console.log(data);
+	  user = getUserInfo(data);
+	  Display.userStats(user);
   }
 
 
