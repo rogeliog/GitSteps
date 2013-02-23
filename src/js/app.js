@@ -6,6 +6,7 @@ $(function(){
   }
 
   displayData = function(data) {
+    Display.userBackground(user);
     Display.userInfo(user);
     Display.userStats(user);
   }

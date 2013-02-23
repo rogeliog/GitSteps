@@ -12,3 +12,7 @@ Display.userInfo = function(user) {
   $("#user_info #image").attr('src', user.profile_image_url);
   $("#user_info #bio").text(user.description);
 }
+
+Display.userBackground = function(user) {
+  $('body').css('background', "url(" + user.profile_background_image_url + ")");
+}
