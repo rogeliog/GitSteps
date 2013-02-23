@@ -1,13 +1,15 @@
 $(function(){
 
   updateData = function(tweets){
-      user = Helpers.getUser(tweets);
+      user = Timeline.getUser(tweets);
+	  mentions = Timeline.getMentionsFor(tweets);
       displayData();
   }
 
   displayData = function(data) {
     Display.userInfo(user);
     Display.userStats(user);
+	Display.mentions(mentions);
   }
 
 
